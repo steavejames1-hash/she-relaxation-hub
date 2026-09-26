@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-massage.jpg";
+import { LegalLinks } from "@/components/LegalPage";
 
 const WHATSAPP = "https://wa.me/15514305027";
 const waLink = (msg: string) => `${WHATSAPP}?text=${encodeURIComponent(msg)}`;
@@ -444,6 +445,7 @@ function Index() {
             Professional relaxation massage for women in Islamabad and Rawalpindi since 2022.
             Strictly a therapeutic, non-sexual service. Bookings by WhatsApp only.
           </p>
+          <LegalLinks />
           <p className="mt-4">© {new Date().getFullYear()} Hadi Massage. All rights reserved.</p>
         </div>
       </footer>
