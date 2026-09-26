@@ -62,14 +62,14 @@
   --color-primary-glow: var(--primary-glow);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
-  --font-display: var(--font-display);
-  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-sans: var(--font-text);
 }
 
 :root {
   --radius: 0.75rem;
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Karla", system-ui, sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-text: "Karla", system-ui, sans-serif;
   --background: oklch(0.984 0.009 95);
   --foreground: oklch(0.26 0.02 145);
   --card: oklch(0.995 0.005 95);
@@ -157,10 +157,10 @@
 
 @layer base {
   body {
-    font-family: var(--font-body);
+    font-family: var(--font-text);
   }
   h1, h2, h3, .font-display {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: -0.01em;
   }
