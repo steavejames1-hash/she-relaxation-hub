@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-massage.jpg";
+import logoText from "@/assets/logo-text-trim.png";
 import { LegalLinks } from "@/components/LegalPage";
 
 const WHATSAPP = "https://wa.me/15514305027";
@@ -207,8 +208,8 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="font-display text-xl tracking-tight">
-            Hadi <span className="text-primary">Massage</span>
+          <a href="#top" className="shrink-0" aria-label="Hadi Massage — Home Service">
+            <img src={logoText} alt="Hadi Massage — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={976} height={221} />
           </a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             <a href="#services" className="transition-colors hover:text-primary">Services</a>

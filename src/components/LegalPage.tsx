@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import logoText from "@/assets/logo-text-trim.png";
 
 export const LEGAL_EMAIL = "hadimassage@gmail.com";
 
@@ -37,7 +38,9 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
         <div className="mx-auto max-w-3xl px-5 py-5">
-          <Link to="/" className="font-display text-xl">Hadi Massage</Link>
+          <Link to="/" className="inline-block" aria-label="Hadi Massage — Home Service">
+            <img src={logoText} alt="Hadi Massage — Home Service, Islamabad & Rawalpindi" className="h-9 w-auto" width={976} height={221} />
+          </Link>
         </div>
       </header>
       <main className="mx-auto max-w-3xl px-5 py-12">
