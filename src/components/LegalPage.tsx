@@ -5,7 +5,7 @@ import logoText from "@/assets/logo-text-trim.png";
 export const LEGAL_EMAIL = "hadimassage@gmail.com";
 
 export function legalHead(title: string, description: string, path: string) {
-  const t = `${title} | Hadi Massage`;
+  const t = `${title} | GentleGlow`;
   return {
     meta: [
       { title: t },
@@ -38,8 +38,8 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
         <div className="mx-auto max-w-3xl px-5 py-5">
-          <Link to="/" className="inline-block" aria-label="Hadi Massage — Home Service">
-            <img src={logoText} alt="Hadi Massage — Home Service, Islamabad & Rawalpindi" className="h-9 w-auto" width={976} height={221} />
+          <Link to="/" className="inline-block" aria-label="GentleGlow — Home Service">
+            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-9 w-auto" width={976} height={221} />
           </Link>
         </div>
       </header>
@@ -59,7 +59,7 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
       </main>
       <footer className="border-t border-border bg-secondary">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Hadi Massage. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} GentleGlow. All rights reserved.</p>
           <LegalLinks />
         </div>
       </footer>

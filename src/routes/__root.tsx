@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hadi Massage — Home Service Massage in Islamabad & Rawalpindi" },
+      { title: "GentleGlow — Home Service Massage in Islamabad & Rawalpindi" },
       {
         name: "description",
         content:
           "Professional home service massage for women in Islamabad and Rawalpindi. Book on WhatsApp.",
       },
-      { name: "author", content: "Hadi Massage" },
-      { property: "og:site_name", content: "Hadi Massage" },
+      { name: "author", content: "GentleGlow" },
+      { property: "og:site_name", content: "GentleGlow" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

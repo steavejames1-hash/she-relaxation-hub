@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage, legalHead } from "@/components/LegalPage";
 
 export const Route = createFileRoute("/privacy-policy")({
-  head: () => legalHead("Privacy Policy", "How Hadi Massage collects, uses and protects your personal information when you book a home service massage.", "/privacy-policy"),
+  head: () => legalHead("Privacy Policy", "How GentleGlow collects, uses and protects your personal information when you book a home service massage.", "/privacy-policy"),
   component: () => (
     <LegalPage title="Privacy Policy">
-      <p>Hadi Massage ("we", "us") respects your privacy. This policy explains what information we collect when you visit this website or book a home service massage in Islamabad or Rawalpindi, and how we use it.</p>
+      <p>GentleGlow ("we", "us") respects your privacy. This policy explains what information we collect when you visit this website or book a home service massage in Islamabad or Rawalpindi, and how we use it.</p>
       <h2>Information we collect</h2>
       <ul>
         <li>Your name, phone/WhatsApp number and address, shared by you when booking.</li>

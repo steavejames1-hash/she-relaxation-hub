@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage, legalHead } from "@/components/LegalPage";
 
 export const Route = createFileRoute("/terms")({
-  head: () => legalHead("Terms & Conditions", "Terms and conditions for booking Hadi Massage home service massage in Islamabad and Rawalpindi.", "/terms"),
+  head: () => legalHead("Terms & Conditions", "Terms and conditions for booking GentleGlow home service massage in Islamabad and Rawalpindi.", "/terms"),
   component: () => (
     <LegalPage title="Terms & Conditions">
-      <p>By booking a session with Hadi Massage you agree to the following terms.</p>
+      <p>By booking a session with GentleGlow you agree to the following terms.</p>
       <h2>Nature of service</h2>
-      <p>Hadi Massage provides professional, therapeutic, non-sexual relaxation massage at the client's home, for female clients only, in Islamabad and Rawalpindi. Any request for inappropriate or sexual services will end the session immediately with no refund.</p>
+      <p>GentleGlow provides professional, therapeutic, non-sexual relaxation massage at the client's home, for female clients only, in Islamabad and Rawalpindi. Any request for inappropriate or sexual services will end the session immediately with no refund.</p>
       <h2>Bookings</h2>
       <ul>
         <li>All bookings are made through WhatsApp. A booking is confirmed only once we reply to confirm it.</li>
