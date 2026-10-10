@@ -21,7 +21,6 @@ export const Route = createFileRoute("/terms")({
         <li>Tell us about any medical conditions, injuries, pregnancy or allergies before the session.</li>
         <li>Provide a safe, clean and private space for the session.</li>
       </ul>
-      <h2>Therapist's rights</h2>
       <h2>Consent, draping and hygiene</h2>
       <ul>
         <li>Consent must be freely given before and throughout the session. You may refuse any technique, request different pressure or stop at any time.</li>
@@ -29,6 +28,7 @@ export const Route = createFileRoute("/terms")({
         <li>Clean equipment and fresh linen are used for each visit. A session may be declined for infection risks or unsafe conditions.</li>
         <li>No photographs, recordings or sharing of personal details without explicit permission.</li>
       </ul>
+      <h2>Therapist's rights</h2>
       <p>The therapist may refuse or stop a session if he feels unsafe, if the environment is unsuitable, or if the client behaves inappropriately.</p>
       <h2>Liability</h2>
       <p>Massage is not a substitute for medical treatment. Share relevant health concerns before booking and seek advice from a qualified healthcare professional where needed. Nothing in these terms excludes rights or liability that cannot lawfully be excluded.</p>
