@@ -14,6 +14,8 @@ import { Route as CancellationPolicyRouteImport } from './routes/cancellation-po
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as MassageAreaRouteImport } from './routes/massage.$area'
+import { Route as ServicesServiceRouteImport } from './routes/services.$service'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +42,16 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MassageAreaRoute = MassageAreaRouteImport.update({
+  id: '/massage/$area',
+  path: '/massage/$area',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesServiceRoute = ServicesServiceRouteImport.update({
+  id: '/services/$service',
+  path: '/services/$service',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/disclaimer': typeof DisclaimerRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/massage/$area': typeof MassageAreaRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/disclaimer': typeof DisclaimerRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/massage/$area': typeof MassageAreaRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,14 +78,28 @@ export interface FileRoutesById {
   '/disclaimer': typeof DisclaimerRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/terms': typeof TermsRoute
+  '/massage/$area': typeof MassageAreaRoute
+  '/services/$service': typeof ServicesServiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/cancellation-policy' | '/disclaimer' | '/privacy-policy' | '/terms'
+    | '/'
+    | '/cancellation-policy'
+    | '/disclaimer'
+    | '/privacy-policy'
+    | '/terms'
+    | '/massage/$area'
+    | '/services/$service'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/cancellation-policy' | '/disclaimer' | '/privacy-policy' | '/terms'
+    | '/'
+    | '/cancellation-policy'
+    | '/disclaimer'
+    | '/privacy-policy'
+    | '/terms'
+    | '/massage/$area'
+    | '/services/$service'
   id:
     | '__root__'
     | '/'
@@ -77,6 +107,8 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/privacy-policy'
     | '/terms'
+    | '/massage/$area'
+    | '/services/$service'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -85,6 +117,8 @@ export interface RootRouteChildren {
   DisclaimerRoute: typeof DisclaimerRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   TermsRoute: typeof TermsRoute
+  MassageAreaRoute: typeof MassageAreaRoute
+  ServicesServiceRoute: typeof ServicesServiceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -124,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/massage/$area': {
+      id: '/massage/$area'
+      path: '/massage/$area'
+      fullPath: '/massage/$area'
+      preLoaderRoute: typeof MassageAreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$service': {
+      id: '/services/$service'
+      path: '/services/$service'
+      fullPath: '/services/$service'
+      preLoaderRoute: typeof ServicesServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -133,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   DisclaimerRoute: DisclaimerRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   TermsRoute: TermsRoute,
+  MassageAreaRoute: MassageAreaRoute,
+  ServicesServiceRoute: ServicesServiceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
