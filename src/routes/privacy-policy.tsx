@@ -10,7 +10,7 @@ export const Route = createFileRoute("/privacy-policy")({
       <ul>
         <li>Your name, phone/WhatsApp number and address, shared by you when booking.</li>
         <li>Preferred appointment time and any health notes you choose to share (e.g. injuries, pregnancy, allergies).</li>
-        <li>Basic, anonymous website usage data (browser type, pages visited) collected by our hosting provider.</li>
+        <li>Technical website data, such as browser information and request logs, which our hosting provider may process to operate and secure the website.</li>
       </ul>
       <h2>How we use it</h2>
       <ul>
@@ -19,9 +19,13 @@ export const Route = createFileRoute("/privacy-policy")({
         <li>To contact you about your booking.</li>
       </ul>
       <h2>Sharing</h2>
-      <p>We never sell or rent your information. We do not share it with third parties except where required by law. Bookings are handled through WhatsApp, which has its own privacy policy.</p>
+      <p>We never sell or rent your information. Booking messages are processed through WhatsApp under its own privacy policy, and our hosting provider processes website requests. We disclose information only as needed to deliver the service, with your permission, or where required by law.</p>
       <h2>Retention and security</h2>
-      <p>We keep booking details only as long as needed to serve you, and take reasonable steps to keep them private. You can ask us to delete your information at any time.</p>
+      <p>We limit access to booking details and health notes to those needed to arrange and safely deliver your session. We retain information only as needed for the booking, legal obligations or disputes, then delete it where possible. No online service can guarantee absolute security.</p>
+      <h2>Sensitive information and consent</h2>
+      <p>Share only health information relevant to safe relaxation massage; do not send identity documents, intimate photographs or unnecessary medical records. We use health notes only for safety and suitability, not diagnosis or treatment. We do not publish client names, addresses, photographs, messages or testimonials without explicit permission. Marketing contact requires separate consent.</p>
+      <h2>WhatsApp and privacy requests</h2>
+      <p>Bookings take place on WhatsApp, not through a form on this website. WhatsApp may process information outside Pakistan under its own terms. To request access, correction or deletion, contact us using the details below. We may need to verify your request and retain information where legally required. Deleting our copy does not delete copies held by WhatsApp or other message recipients.</p>
       <h2>Your rights</h2>
       <p>You may request access to, correction of, or deletion of your personal information by emailing us.</p>
     </LegalPage>

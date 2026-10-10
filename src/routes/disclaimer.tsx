@@ -11,7 +11,11 @@ export const Route = createFileRoute("/disclaimer")({
       <h2>Health conditions</h2>
       <p>If you are pregnant, recovering from surgery, or have heart problems, high blood pressure, skin conditions, blood clots or other medical concerns, tell us before your session. We may adjust or decline the session for your safety.</p>
       <h2>Professional service only</h2>
-      <p>GentleGlow offers strictly professional, therapeutic, non-sexual massage. We do not offer any adult services.</p>
+      <p>GentleGlow offers strictly professional, non-medical, non-sexual relaxation massage. No adult services, intimate-area massage, sexual contact or inappropriate requests are accepted.</p>
+      <h2>Safety and consent</h2>
+      <p>Results vary and relief is not guaranteed. Stop the session if you experience pain, dizziness or discomfort. You can withdraw consent at any time. Massage is not emergency care; seek medical assistance for urgent symptoms.</p>
+      <h2>No claim of government approval</h2>
+      <p>An online course certificate is not evidence of healthcare registration or government authorisation. This website does not establish that local licensing or registration requirements have been satisfied.</p>
       <h2>External links</h2>
       <p>This site links to WhatsApp and other third-party services. We are not responsible for their content or policies.</p>
     </LegalPage>

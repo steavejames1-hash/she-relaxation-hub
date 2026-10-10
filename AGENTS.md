@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared policy limits and training references in a browser-safe policy module and the disclosure in the shared legal page, so all policies remain consistent.
