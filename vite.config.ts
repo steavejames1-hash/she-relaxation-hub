@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Deploy to Netlify: emit a Netlify Function + static assets in dist/ instead of the
+  // default Cloudflare Worker bundle. Lovable's own sandbox builds still force Cloudflare.
+  nitro: { preset: "netlify" },
 });
