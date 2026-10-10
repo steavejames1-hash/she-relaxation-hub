@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  # Nitro's Netlify preset writes static assets here and the SSR function
+  # to .netlify/functions-internal, which Netlify picks up automatically.
+  publish = "dist"
+
+[build.environment]
+  # Lovable's Vite config defaults Nitro to Cloudflare; pin the Netlify target.
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"
