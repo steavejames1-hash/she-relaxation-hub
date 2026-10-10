@@ -1,0 +1,2 @@
+- [ ] Strengthen all four policies and include the stated training disclosure.
+- [ ] Verify policy pages and navigation.

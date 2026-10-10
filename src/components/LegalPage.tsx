@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import logoText from "@/assets/logo-text.png";
+import { servicePolicy } from "@/lib/service-policy";
 
 export const LEGAL_EMAIL = "hadimassage@gmail.com";
 
@@ -45,9 +46,15 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
       </header>
       <main className="mx-auto max-w-3xl px-5 py-12">
         <h1 className="font-display text-4xl">{title}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Last updated: September 2026</p>
+        <p className="mt-2 text-sm text-muted-foreground">Last updated: October 10, 2026</p>
         <div className="mt-8 space-y-6 leading-relaxed text-muted-foreground [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:text-foreground [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-1">
           {children}
+          <h2>Training and scope of service</h2>
+          <p>Hadi, GentleGlow's male therapist, has completed the online Udemy course{" "}
+            <a className="text-primary underline" href={servicePolicy.courseUrl} target="_blank" rel="noopener noreferrer">{servicePolicy.courseName}</a>.
+            {" "}This is skills-based relaxation massage training, not a government licence, medical qualification or permission to practise physiotherapy. Course completion does not establish government approval of this business.
+          </p>
+          <p>GentleGlow provides professional, non-sexual, non-medical relaxation and wellness massage through home visits for women aged {servicePolicy.minimumAge} and over in Islamabad and Rawalpindi. We do not diagnose conditions, prescribe treatment, provide rehabilitation or promise a cure. Applicable local business and regulatory requirements remain separate from this course.</p>
           <h2>Contact</h2>
           <p>
             Questions about this page? Email{" "}
