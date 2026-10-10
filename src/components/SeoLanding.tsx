@@ -44,7 +44,7 @@ export function SeoLanding({ page }: { page: SeoPage }) {
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
           <Link to="/" aria-label="GentleGlow home">
-            <img src={logoText} alt="GentleGlow" className="h-10 w-auto" width={1600} height={512} />
+            <img src={logoText} alt="GentleGlow" className="h-10 w-auto" width={1600} height={544} />
           </Link>
           <a href={`${WA}?text=${msg}`} target="_blank" rel="noopener" className="rounded-full bg-whatsapp px-5 py-2.5 text-sm font-semibold text-whatsapp-foreground">
             Book on WhatsApp
