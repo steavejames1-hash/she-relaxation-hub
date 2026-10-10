@@ -1,2 +1,2 @@
-- [ ] Strengthen all four policies and include the stated training disclosure.
-- [ ] Verify policy pages and navigation.
+- [x] Strengthen all four policies and include the stated training disclosure.
+- [x] Verify policy pages and navigation.
