@@ -210,7 +210,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="shrink-0" aria-label="GentleGlow — Home Service">
-            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={976} height={221} />
+            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={1600} height={512} />
           </a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             <a href="#services" className="transition-colors hover:text-primary">Services</a>

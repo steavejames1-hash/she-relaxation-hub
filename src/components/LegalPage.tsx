@@ -39,7 +39,7 @@ export function LegalPage({ title, children }: { title: string; children: ReactN
       <header className="border-b border-border">
         <div className="mx-auto max-w-3xl px-5 py-5">
           <Link to="/" className="inline-block" aria-label="GentleGlow — Home Service">
-            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-9 w-auto" width={976} height={221} />
+            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-9 w-auto" width={1600} height={512} />
           </Link>
         </div>
       </header>
