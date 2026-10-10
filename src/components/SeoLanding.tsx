@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import logoText from "@/assets/logo-text-trim.png";
+import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
 import { areaPages, servicePages, type SeoPage } from "@/lib/seo-pages";
 
 const WA = "https://wa.me/15514305027";
 
 export function seoHead(p: SeoPage, base: string) {
-  const title = `${p.h1} | Hadi Massage`;
+  const title = `${p.h1} | GentleGlow`;
   const description = `${p.intro.slice(0, 150)}… Book on WhatsApp.`;
   const path = `/${base}/${p.slug}`;
   return {
@@ -26,7 +26,7 @@ export function seoHead(p: SeoPage, base: string) {
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HealthAndBeautyBusiness",
-          name: `Hadi Massage — ${p.name}`,
+          name: `GentleGlow — ${p.name}`,
           description: p.intro,
           areaServed: p.name,
           address: { "@type": "PostalAddress", addressLocality: p.city.split(" ")[0], addressCountry: "PK" },
@@ -43,8 +43,8 @@ export function SeoLanding({ page }: { page: SeoPage }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
-          <Link to="/" aria-label="Hadi Massage home">
-            <img src={logoText} alt="Hadi Massage" className="h-10 w-auto" width={976} height={221} />
+          <Link to="/" aria-label="GentleGlow home">
+            <img src={logoText} alt="GentleGlow" className="h-10 w-auto" width={1600} height={544} />
           </Link>
           <a href={`${WA}?text=${msg}`} target="_blank" rel="noopener" className="rounded-full bg-whatsapp px-5 py-2.5 text-sm font-semibold text-whatsapp-foreground">
             Book on WhatsApp

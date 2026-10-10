@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { areaPages, servicePages } from "@/lib/seo-pages";
 import heroImage from "@/assets/hero-massage.jpg";
-import logoText from "@/assets/logo-text-trim.png";
+import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
 
 const WHATSAPP = "https://wa.me/15514305027";
 const waLink = (msg: string) => `${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
-const TITLE = "Home Service Massage in Islamabad & Rawalpindi | Hadi Massage";
+const TITLE = "Home Service Massage in Islamabad & Rawalpindi | GentleGlow";
 const DESCRIPTION =
   "Professional full body relaxation massage for women at home in Islamabad and Rawalpindi. Male therapist, since 2022. Flexible timings, private and respectful. Book on WhatsApp.";
 
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "HealthAndBeautyBusiness",
-          name: "Hadi Massage — Home Service",
+          name: "GentleGlow — Home Service",
           description: DESCRIPTION,
           foundingDate: "2022",
           areaServed: [
@@ -209,8 +209,8 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="shrink-0" aria-label="Hadi Massage — Home Service">
-            <img src={logoText} alt="Hadi Massage — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={976} height={221} />
+          <a href="#top" className="shrink-0" aria-label="GentleGlow — Home Service">
+            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={1600} height={544} />
           </a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             <a href="#services" className="transition-colors hover:text-primary">Services</a>
@@ -463,13 +463,13 @@ function Index() {
 
       <footer className="border-t border-border bg-secondary">
         <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-muted-foreground">
-          <p className="font-display text-lg text-foreground">Hadi Massage — Home Service Only</p>
+          <p className="font-display text-lg text-foreground">GentleGlow — Home Service Only</p>
           <p className="mt-2 max-w-2xl">
             Professional relaxation massage for women in Islamabad and Rawalpindi since 2022.
             Strictly a therapeutic, non-sexual service. Bookings by WhatsApp only.
           </p>
           <LegalLinks />
-          <p className="mt-4">© {new Date().getFullYear()} Hadi Massage. All rights reserved.</p>
+          <p className="mt-4">© {new Date().getFullYear()} GentleGlow. All rights reserved.</p>
         </div>
       </footer>
 

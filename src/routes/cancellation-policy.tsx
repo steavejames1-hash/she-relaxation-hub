@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage, legalHead } from "@/components/LegalPage";
 
 export const Route = createFileRoute("/cancellation-policy")({
-  head: () => legalHead("Cancellation & Refund Policy", "How to cancel or reschedule a Hadi Massage home service appointment, and our refund policy.", "/cancellation-policy"),
+  head: () => legalHead("Cancellation & Refund Policy", "How to cancel or reschedule a GentleGlow home service appointment, and our refund policy.", "/cancellation-policy"),
   component: () => (
     <LegalPage title="Cancellation & Refund Policy">
       <h2>Rescheduling and cancelling</h2>
