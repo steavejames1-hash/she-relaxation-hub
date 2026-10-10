@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import logoText from "@/assets/logo-text-trim.png";
+import logoText from "@/assets/logo-text.png";
 
 export const LEGAL_EMAIL = "hadimassage@gmail.com";
 

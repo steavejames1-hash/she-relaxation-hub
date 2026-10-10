@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { areaPages, servicePages } from "@/lib/seo-pages";
 import heroImage from "@/assets/hero-massage.jpg";
-import logoText from "@/assets/logo-text-trim.png";
+import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
 
 const WHATSAPP = "https://wa.me/15514305027";

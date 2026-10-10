@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoText from "@/assets/logo-text-trim.png";
+import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
 import { areaPages, servicePages, type SeoPage } from "@/lib/seo-pages";
 
