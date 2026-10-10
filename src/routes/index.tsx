@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { areaPages, servicePages } from "@/lib/seo-pages";
 import heroImage from "@/assets/hero-massage.jpg";
 import logoText from "@/assets/logo-text-trim.png";
 import { LegalLinks } from "@/components/LegalPage";
@@ -438,6 +439,27 @@ function Index() {
           </div>
         </section>
       </main>
+
+      <section className="border-t border-border bg-card">
+        <div className="mx-auto max-w-6xl px-5 py-14">
+          <h2 className="text-2xl md:text-3xl">Massage by area</h2>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {areaPages.map((a) => (
+              <Link key={a.slug} to="/massage/$area" params={{ area: a.slug }} className="rounded-full border border-border bg-background px-4 py-2 text-sm text-muted-foreground hover:text-primary">
+                Massage {a.name}
+              </Link>
+            ))}
+          </div>
+          <h2 className="mt-10 text-2xl md:text-3xl">Home, hotel, flat & mobile massage</h2>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {servicePages.map((s) => (
+              <Link key={s.slug} to="/services/$service" params={{ service: s.slug }} className="rounded-full border border-border bg-background px-4 py-2 text-sm text-muted-foreground hover:text-primary">
+                {s.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <footer className="border-t border-border bg-secondary">
         <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-muted-foreground">
