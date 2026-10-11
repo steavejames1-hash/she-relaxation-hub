@@ -1,5 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
 import { WHATSAPP_URL, absoluteUrl } from "@/lib/site";
@@ -38,33 +37,6 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const navigate = useNavigate();
-  const [submitting, setSubmitting] = useState(false);
-
-  // Netlify Forms SPA pattern: AJAX the submission to "/", then route to the
-  // branded confirmation page (Netlify's default success page bypassed).
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    const form = e.currentTarget;
-    e.preventDefault();
-    setSubmitting(true);
-    try {
-      const fd = new FormData(form);
-      const params = new URLSearchParams();
-      fd.forEach((value, key) => params.append(key, String(value)));
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      await navigate({ to: "/booking-sent" });
-    } catch {
-      form.submit(); // no-JS-style fallback: native POST to Netlify
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
@@ -93,13 +65,14 @@ function ContactPage() {
           </div>
         </section>
         <section className="mx-auto max-w-2xl px-5 py-14">
+          {/* Native POST: Netlify intercepts, records the submission and
+              redirects to the static branded success page. */}
           <form
             name="booking"
             method="POST"
-            action="/booking-sent"
+            action="/booking-sent.html"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={onSubmit}
             className="rounded-3xl border border-border bg-card p-7 md:p-9"
             style={{ boxShadow: "var(--shadow-soft)" }}
           >
@@ -141,11 +114,10 @@ function ContactPage() {
               </label>
               <button
                 type="submit"
-                disabled={submitting}
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-4 font-semibold text-whatsapp-foreground transition-transform hover:scale-[1.02] disabled:opacity-70"
+                className="mt-2 inline-flex items-center justify-center rounded-full bg-whatsapp px-8 py-4 font-semibold text-whatsapp-foreground transition-transform hover:scale-[1.02]"
                 style={{ boxShadow: "var(--shadow-soft)" }}
               >
-                {submitting ? "Sending…" : "Send booking request"}
+                Send booking request
               </button>
             </div>
             <p className="mt-5 text-sm text-muted-foreground">

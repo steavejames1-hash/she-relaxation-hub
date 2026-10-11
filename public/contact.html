@@ -27,7 +27,7 @@
       <!-- Static copy of the /contact form so Netlify's deploy-time form detection registers "booking".
            The canonical, JS-rendered page is /contact. -->
       <div class="card">
-        <form name="booking" method="POST" action="/booking-sent" netlify netlify-honeypot="bot-field">
+        <form name="booking" method="POST" action="/booking-sent.html" netlify netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="booking" />
           <p style="display:none">
             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
