@@ -11,8 +11,8 @@ import {
 } from "@/lib/site";
 
 export function seoHead(p: SeoPage, base: string) {
-  const title = `${p.h1} | GentleGlow`;
-  const description = `${trimDescription(p.intro)} Book on WhatsApp.`;
+  const title = p.title ?? `${p.h1} | GentleGlow`;
+  const description = p.description ?? `${trimDescription(p.intro)} Book on WhatsApp.`;
   const path = `/${base}/${p.slug}`;
   const url = absoluteUrl(path);
   const isService = base === "services";
