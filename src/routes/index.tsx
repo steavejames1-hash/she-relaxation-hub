@@ -198,6 +198,7 @@ function Index() {
             <a href="#areas" className="transition-colors hover:text-primary">Areas</a>
             <a href="#how" className="transition-colors hover:text-primary">How it works</a>
             <a href="#faq" className="transition-colors hover:text-primary">FAQ</a>
+            <Link to="/contact" className="transition-colors hover:text-primary">Contact</Link>
           </nav>
           <WhatsAppButton message="Hi Hadi, I'd like to book a home service massage.">
             Book on WhatsApp

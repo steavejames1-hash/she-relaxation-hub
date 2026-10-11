@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book a Home Massage | GentleGlow</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://gentleglow-massage.com/contact" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <meta http-equiv="refresh" content="12; url=/contact" />
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; background: #fbf9f3; color: #3d3229; }
+      .wrap { max-width: 560px; margin: 0 auto; padding: 40px 20px; }
+      .card { background: #fff; border: 1px solid #e8e0d4; border-radius: 24px; padding: 28px; }
+      h1 { font-size: 1.6rem; margin: 0 0 6px; }
+      p.lead { color: #7a6f61; margin-top: 0; }
+      label { display: block; font-weight: 600; font-size: 0.9rem; margin: 14px 0 4px; }
+      input, select, textarea { width: 100%; box-sizing: border-box; padding: 11px 14px; border: 1px solid #ddd4c6; border-radius: 12px; font: inherit; background: #fdfcf9; }
+      button { margin-top: 20px; width: 100%; padding: 14px; border: 0; border-radius: 999px; background: #25d366; color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; }
+      .note { font-size: 0.85rem; color: #7a6f61; margin-top: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Book your home massage</h1>
+      <p class="lead">Ladies-only home service · Islamabad &amp; Rawalpindi · Since 2022</p>
+      <!-- Static copy of the /contact form so Netlify's deploy-time form detection registers "booking".
+           The canonical, JS-rendered page is /contact. -->
+      <div class="card">
+        <form name="booking" method="POST" action="/booking-sent" netlify netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="booking" />
+          <p style="display:none">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <label>Your name
+            <input type="text" name="name" required autocomplete="name" placeholder="e.g. Ayesha" />
+          </label>
+          <label>WhatsApp number (including country code)
+            <input type="tel" name="whatsapp" required autocomplete="tel" placeholder="e.g. +92 300 1234567" />
+          </label>
+          <label>Massage type
+            <select name="massage-type" required>
+              <option value="" disabled selected>Choose a session…</option>
+              <option>Full body relaxation massage</option>
+              <option>Deep tissue massage</option>
+              <option>Back, neck &amp; shoulder</option>
+              <option>Head &amp; foot massage</option>
+              <option>Not sure yet — please advise</option>
+            </select>
+          </label>
+          <label>Your location
+            <input type="text" name="location" required placeholder="e.g. F-10/4 Islamabad, Bahria Town Rawalpindi, or hotel name" />
+          </label>
+          <label>Custom note (optional — preferred day, time, pressure or anything else)
+            <textarea name="note" rows="4" placeholder="e.g. Saturday morning, medium pressure, 90 minutes"></textarea>
+          </label>
+          <button type="submit">Send booking request</button>
+          <p class="note">This sends your request to Hadi by email — no payment happens online. You'll get a confirmation on WhatsApp with the exact price and time.</p>
+        </form>
+      </div>
+      <p class="note">Continuing to the main site in a moment… <a href="/contact">gentleglow-massage.com/contact</a></p>
+    </div>
+  </body>
+</html>

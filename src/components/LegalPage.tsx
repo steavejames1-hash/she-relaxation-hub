@@ -26,6 +26,7 @@ export function LegalLinks() {
   const c = "hover:text-foreground underline-offset-4 hover:underline";
   return (
     <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+      <Link to="/contact" className={c}>Contact / Booking Form</Link>
       <Link to="/privacy-policy" className={c}>Privacy Policy</Link>
       <Link to="/terms" className={c}>Terms & Conditions</Link>
       <Link to="/disclaimer" className={c}>Disclaimer</Link>
