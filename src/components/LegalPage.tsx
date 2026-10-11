@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import logoText from "@/assets/logo-text.png";
 import { servicePolicy } from "@/lib/service-policy";
+import { absoluteUrl } from "@/lib/site";
 
 export const LEGAL_EMAIL = "hadimassage@gmail.com";
 
@@ -14,10 +15,10 @@ export function legalHead(title: string, description: string, path: string) {
       { property: "og:title", content: t },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: path },
+      { property: "og:url", content: absoluteUrl(path) },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: path }],
+    links: [{ rel: "canonical", href: absoluteUrl(path) }],
   };
 }
 

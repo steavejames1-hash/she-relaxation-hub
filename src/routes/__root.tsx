@@ -11,6 +11,7 @@ import { lazy, useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { OG_IMAGE, SITE_NAME } from "../lib/site";
 
 function NotFoundComponent() {
   return (
@@ -84,10 +85,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Professional home service massage for women in Islamabad and Rawalpindi. Book on WhatsApp.",
       },
-      { name: "author", content: "GentleGlow" },
-      { property: "og:site_name", content: "GentleGlow" },
+      { name: "author", content: SITE_NAME },
+      { property: "og:site_name", content: SITE_NAME },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: OG_IMAGE },
+      {
+        property: "og:image:alt",
+        content: "GentleGlow home service massage — Islamabad & Rawalpindi",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       {

@@ -3,13 +3,40 @@ import { areaPages, servicePages } from "@/lib/seo-pages";
 import heroImage from "@/assets/hero-massage.jpg";
 import logoText from "@/assets/logo-text.png";
 import { LegalLinks } from "@/components/LegalPage";
+import { absoluteUrl, OG_IMAGE, SITE_URL, WHATSAPP_URL as WHATSAPP } from "@/lib/site";
 
-const WHATSAPP = "https://wa.me/15514305027";
 const waLink = (msg: string) => `${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
 const TITLE = "Home Service Massage in Islamabad & Rawalpindi | GentleGlow";
 const DESCRIPTION =
   "Professional full body relaxation massage for women at home in Islamabad and Rawalpindi. Male therapist, since 2022. Flexible timings, private and respectful. Book on WhatsApp.";
+
+const faqs = [
+  {
+    q: "Do you offer massage home service in Islamabad and Rawalpindi?",
+    a: "Yes — home service only. Hadi travels to your home, apartment, guest house or hotel anywhere in Islamabad and Rawalpindi. There is no walk-in centre.",
+  },
+  {
+    q: "What is the price of a home service massage?",
+    a: "Price depends on the session length and your location. Send a quick WhatsApp message and you will get the current price list before you commit to anything.",
+  },
+  {
+    q: "I am overseas — can I book for my stay in Pakistan?",
+    a: "Yes. Many clients living in the UK, USA, UAE, Canada and Australia book ahead for their trip home, or arrange a session for family staying in Islamabad or Rawalpindi. WhatsApp works from any country.",
+  },
+  {
+    q: "Is this service only for women?",
+    a: "Yes. Hadi is a male therapist and works with female clients only, in a professional, respectful and fully private setting.",
+  },
+  {
+    q: "What do I need to arrange at home?",
+    a: "Only a quiet room. Hadi brings the massage table, fresh towels and oils, and everything is cleaned between clients.",
+  },
+  {
+    q: "What are the timings?",
+    a: "Appointments are flexible, generally from morning until late evening, seven days a week. Same-day slots are often available.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,7 +47,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: absoluteUrl("/") },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "keywords",
@@ -28,7 +55,7 @@ export const Route = createFileRoute("/")({
           "home service massage Islamabad, full body massage home service Islamabad, massage home service Rawalpindi, home massage for ladies Islamabad, mobile massage therapist Islamabad, relaxation massage at home Islamabad",
       },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
     scripts: [
       {
         type: "application/ld+json",
@@ -38,6 +65,7 @@ export const Route = createFileRoute("/")({
           name: "GentleGlow — Home Service",
           description: DESCRIPTION,
           foundingDate: "2022",
+          image: OG_IMAGE,
           areaServed: [
             { "@type": "City", name: "Islamabad" },
             { "@type": "City", name: "Rawalpindi" },
@@ -48,7 +76,15 @@ export const Route = createFileRoute("/")({
             addressCountry: "PK",
           },
           availableLanguage: ["English", "Urdu"],
-          url: WHATSAPP,
+          url: SITE_URL,
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "reservations",
+              url: WHATSAPP,
+              availableLanguage: ["English", "Urdu"],
+            },
+          ],
           openingHours: "Mo-Su 09:00-23:00",
           makesOffer: [
             "Full body relaxation massage at home",
@@ -63,40 +99,11 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "Do you offer massage home service in Islamabad and Rawalpindi?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. This is a home service only. Hadi travels to your home, apartment, guest house or hotel across Islamabad and Rawalpindi.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "What does a home service massage cost?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Pricing depends on the session length and your location. Send a WhatsApp message for the current price list before booking.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "I am visiting Pakistan from abroad. Can you come to my hotel or guest house?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. Overseas visitors and expats staying in Islamabad or Rawalpindi can book by WhatsApp from anywhere in the world before or during their trip.",
-              },
-            },
-            {
-              "@type": "Question",
-              name: "Is the service only for women?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. Hadi is a male therapist offering professional relaxation massage for female clients only, in a respectful and private setting.",
-              },
-            },
-          ],
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
         }),
       },
     ],
@@ -175,33 +182,6 @@ const steps = [
   { n: "01", t: "Message on WhatsApp", d: "Tell Hadi your area, preferred time and session length." },
   { n: "02", t: "Confirm price & slot", d: "You get the exact price and a confirmed appointment time." },
   { n: "03", t: "Relax at home", d: "Hadi arrives with a clean table, fresh linen and oils. Nothing for you to arrange." },
-];
-
-const faqs = [
-  {
-    q: "Do you offer massage home service in Islamabad and Rawalpindi?",
-    a: "Yes — home service only. Hadi travels to your home, apartment, guest house or hotel anywhere in Islamabad and Rawalpindi. There is no walk-in centre.",
-  },
-  {
-    q: "What is the price of a home service massage?",
-    a: "Price depends on the session length and your location. Send a quick WhatsApp message and you will get the current price list before you commit to anything.",
-  },
-  {
-    q: "I am overseas — can I book for my stay in Pakistan?",
-    a: "Yes. Many clients living in the UK, USA, UAE, Canada and Australia book ahead for their trip home, or arrange a session for family staying in Islamabad or Rawalpindi. WhatsApp works from any country.",
-  },
-  {
-    q: "Is this service only for women?",
-    a: "Yes. Hadi is a male therapist and works with female clients only, in a professional, respectful and fully private setting.",
-  },
-  {
-    q: "What do I need to arrange at home?",
-    a: "Only a quiet room. Hadi brings the massage table, fresh towels and oils, and everything is cleaned between clients.",
-  },
-  {
-    q: "What are the timings?",
-    a: "Appointments are flexible, generally from morning until late evening, seven days a week. Same-day slots are often available.",
-  },
 ];
 
 function Index() {
