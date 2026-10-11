@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { areaPages, servicePages } from "@/lib/seo-pages";
 import heroImage from "@/assets/hero-massage.jpg";
 import logoText from "@/assets/logo-text.png";
+import brandBanner from "@/assets/brand-banner.png";
 import { LegalLinks } from "@/components/LegalPage";
 import { absoluteUrl, OG_IMAGE, SITE_URL, WHATSAPP_URL as WHATSAPP } from "@/lib/site";
 
@@ -190,7 +191,7 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#top" className="shrink-0" aria-label="GentleGlow — Home Service">
-            <img src={logoText} alt="GentleGlow — Home Service, Islamabad & Rawalpindi" className="h-11 w-auto" width={1600} height={544} />
+            <img src={logoText} alt="GentleGlow — Women's Home Massage Therapy, Islamabad & Rawalpindi" className="h-11 w-auto" width={915} height={261} />
           </a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
             <a href="#services" className="transition-colors hover:text-primary">Services</a>
@@ -404,6 +405,14 @@ function Index() {
 
         {/* Final CTA */}
         <section className="mx-auto max-w-4xl px-5 py-20 text-center">
+          <img
+            src={brandBanner}
+            alt="GentleGlow — Full Body Massage, Islamabad Home Services"
+            width={695}
+            height={464}
+            className="mx-auto mb-10 w-full max-w-md rounded-3xl object-cover"
+            style={{ boxShadow: "var(--shadow-soft)" }}
+          />
           <h2 className="text-3xl md:text-5xl">Ready to unwind at home?</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             One message is all it takes. Tell Hadi your area and preferred time, and your session
